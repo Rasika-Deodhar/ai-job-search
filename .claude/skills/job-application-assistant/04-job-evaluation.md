@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Python, Gen AI/LLM engineering (RAG, prompt engineering, LangChain, OpenAI GPT, Llama), full-stack development (React/Next.js, Node.js, REST/GraphQL APIs), AI automation/workflow tooling (n8n, Salesforce), Agile/Kanban delivery
+**Moderate match areas:** Java 8/Spring Boot, Angular, cloud/DevOps (Docker, Kubernetes basics, AWS, GCP, CI/CD), classical data analytics/ML (Pandas, Scikit-learn, NLP), Enterprise Architecture and stakeholder collaboration
+**Weak match areas:** Deep MLOps/production ML infrastructure, large-scale distributed systems architecture, formal product management certification (though SAFe Agilist covers Agile leadership)
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** GenAI/LLM application development (MMC Innovation Lab), AI-driven automation and program management (Qlik), full-stack enterprise development (Citi)
+**Moderate:** Technical/product program management more broadly (only ~1 year direct experience, at Qlik), data governance/API platform work (Informatica)
+**Entry-level:** Formal product management outside the AI-automation niche (Forage simulation only, no employer-based PM role yet)
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -63,19 +63,21 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- AI/ML Engineering - hands-on GenAI, RAG, and LLM application development
+- Technical Program/Product Management - bridging engineering and business, owning roadmaps
+- Hybrid AI Program Manager (Qlik-style) - driving AI adoption and automation initiatives with real technical depth, not just coordination
+
+All three directions are live targets, not a narrowed single path - Rasika's ideal next role sits at the intersection of AI engineering depth and program/product ownership. Score roles that combine these two dimensions higher than roles that are purely one or the other.
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: learning new tools/domains, hands-on GenAI/LLM work, cross-functional work that bridges engineering and business
+- Tasks that drain: not yet specifically captured beyond culture signals below - ask if a posting looks like a poor fit on tasks alone
+- Non-task factors: a genuinely healthy, collaborative team culture; hiring/interview processes that evaluate real experience rather than pure algorithmic screening
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Currently employed (Qlik internship) while finishing the Master's degree (expected Dec 2026); actively searching for a full-time role to start after graduation. Work authorization is CPT/OPT/STEM OPT - visa sponsorship pathway (STEM OPT extension, future H-1B) is a strong preference in evaluation, weighted heavily but not an automatic disqualifier per role.
+- **Flexibility**: Open to Minnesota (Twin Cities metro and beyond) plus remote roles anywhere in the US; open to relocation for the right role but not required.
+- **Professional development**: Continuous learning is a top priority - weight roles with a genuine learning/growth culture (mentorship, internal tech investment, varied problem exposure) above otherwise-similar roles without it.
 
 ### 6. Salary Benchmark (Optional)
 

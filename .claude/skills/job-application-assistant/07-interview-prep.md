@@ -10,28 +10,53 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 ## Ready-Made STAR Examples
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+<!-- Populated by /setup from resume bullets. These are STUBS - situation/task/action/result detail
+     needs to be filled in by Rasika from memory before relying on them in an interview. -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 1. LenAI Chatbot & RAG Document Extraction (GenAI / RAG)
+**Source:** CV - MMC Innovation Lab, Applications Developer
+**What happened:** Contributed to a company-wide LLM-powered chatbot (LenAI) and document extraction workflows using prompt engineering and RAG, cutting manual data entry time by 40%.
+**S:**
+**T:**
+**A:** (mention specific tools: OpenAI GPT, LangChain, Pinecone/Chroma)
+**R:** 40% reduction in manual data entry time
+**Use for:** "Tell me about a GenAI project you built end-to-end", "How have you used RAG in production?"
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. Text-to-Speech / Speech-to-Text API Platform (API design at scale)
+**Source:** CV - MMC Innovation Lab, Applications Developer
+**What happened:** Designed, developed, and published internal APIs and client libraries for TTS/STT services using Google Apigee, supporting 10k+ monthly API calls across multiple internal teams.
+**S:**
+**T:**
+**A:**
+**R:** 10k+ monthly API calls across multiple internal teams
+**Use for:** "Describe a system you designed for other teams to consume", "How do you think about API design for internal platforms?"
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 3. GenAI Workshops & Framework Rollout (Enablement / cross-functional collaboration)
+**Source:** CV - MMC Innovation Lab, Applications Developer
+**What happened:** Conducted hands-on workshops and created reusable prompts/templates, onboarding 100+ employees to the GenAI framework.
+**S:**
+**T:**
+**A:**
+**R:** 100+ employees onboarded to the GenAI framework
+**Use for:** "Tell me about a time you drove adoption of a new tool or process", "How do you communicate technical concepts to non-technical stakeholders?"
+
+### 4. Angular UI Migration (Full-stack / legacy modernization)
+**Source:** CV - Citi, Technology Analyst
+**What happened:** Led UI migration from legacy systems to Angular, improving performance and maintainability.
+**S:**
+**T:**
+**A:**
+**R:** 40% decrease in page load times, enhanced user engagement
+**Use for:** "Tell me about a time you improved performance or modernized a legacy system", "How do you approach a large refactor with production risk?"
+
+### 5. AI Automation Workflows at Qlik (Current role - AI + program management hybrid)
+**Source:** CV - Qlik, AI Program Management Intern
+**What happened:** Building AI agent workflows and automation pipelines using n8n and Salesforce to shift post-sales customer support toward self-service, reducing dependency on live agents.
+**S:**
+**T:**
+**A:**
+**R:** (quantify self-service shift / reduced live-agent dependency once available)
+**Use for:** "Tell me about a time you combined technical and program management skills", "How do you approach AI automation projects?" - **best example for hybrid AI Program Manager roles specifically**
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 

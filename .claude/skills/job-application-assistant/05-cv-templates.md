@@ -105,12 +105,14 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For AI/ML Engineering roles:**
+> AI/GenAI engineer with hands-on experience building and deploying LLM-powered applications, including RAG pipelines, document extraction workflows, and production chatbots (LenAI at MMC Innovation Lab), using OpenAI GPT, Llama, LangChain, and vector databases (Pinecone/Chroma). Full-stack background (React/Next.js, Node.js, Python) means I can take a GenAI proof-of-concept from prototype to a deployed, API-backed product. Currently deepening automation and workflow-engineering skills (n8n, Salesforce) as an AI Program Management Intern at Qlik.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Technical Program/Product Management roles:**
+> Technical program manager with an engineering foundation spanning full-stack development, GenAI/LLM systems, and enterprise platforms (Citi, MMC Innovation Lab). Currently driving AI automation initiatives at Qlik, translating ambiguous cross-functional goals into shipped workflows using n8n and Salesforce. Pairs a Master's in Engineering Management (GPA 4.0, in progress) and a Certified AI-Empowered SAFe Agilist credential with direct hands-on technical depth - able to sit in both the roadmap conversation and the implementation detail.
+
+**For Hybrid AI Program Manager roles (Qlik-style):**
+> AI program manager who came up through hands-on engineering, not around it. Built and shipped LLM-powered products (RAG document extraction, internal chatbots) as an Applications Developer before moving into AI-driven automation and self-service workflow design at Qlik. Comfortable owning the "why" and the "how" of an AI initiative: stakeholder alignment, workflow design (n8n/Salesforce), and enough technical fluency to evaluate what's actually feasible to build.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.
