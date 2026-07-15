@@ -122,23 +122,42 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
 }
 ```
 
-`/rank` extends this schema additively: ranked entries also carry `rank_score` (0–100 overall score), `rank_verdict` (fit band, e.g. "strong fit"), and `rank_date` (ISO date of ranking). The `status` field is set to `"ranked"`. Step 4.5 (below) also extends this schema additively with a `contacts` object. Do not drop any of these fields when re-writing entries.
+`/rank` extends this schema additively: ranked entries also carry `rank_score` (0–100 overall score), `rank_verdict` (fit band, e.g. "strong fit"), and `rank_date` (ISO date of ranking). The `status` field is set to `"ranked"`. Do not drop any of these fields when re-writing entries.
 
 2. Only present jobs NOT already in the seen list or tracker.
 
 ### Step 4.5: Find Referral Contacts (High & Medium Fit Only)
 
-For every job from this run with `fit` of **high** or **medium** (skip low-fit jobs, and
-skip any job whose `seen_jobs.json` entry already has a `contacts` object from a prior
-run), find people worth reaching out to for a referral or a warm intro.
+For every job from this run with `fit` of **high** or **medium** (skip low-fit jobs),
+find people worth reaching out to for a referral or a warm intro. Two sources, used
+together.
 
-Read `referral-contacts.md` (this directory) for the full method - it covers the
-Apollo.io search parameters (recruiters/TA search + role/team-peer search), the LinkedIn
-manual-search-link fallback, the `contacts` storage schema, and the hard rule against
-calling any credit-costing Apollo endpoint without explicit per-contact user confirmation.
+**1. Apollo.io API (primary).** Use `apollo_mixed_people_api_search` - a free search
+endpoint (not enrichment), no credit cost, no confirmation prompt, though it doesn't
+return emails/phone and may mask last names on some plans. Run two searches per
+qualifying job:
+- **Recruiters/TA:** `q_keywords: "<Company Name>"`, `person_titles: ["recruiter", "technical recruiter", "talent acquisition", "talent acquisition partner", "people operations", "hr business partner"]`, `per_page: 5`
+- **Role/team peers:** `q_keywords: "<Company Name>"`, `person_titles: [<2-3 titles derived from the posting: the exact title, its likely manager title, and one adjacent team title>]`, `per_page: 5` - e.g. "AI Program Manager" -> `["AI Program Manager", "Technical Program Manager", "Program Manager"]`. Pass `organization_locations` when the posting names a specific office/city.
 
-Store the result in each job's `seen_jobs.json` entry as it's produced, so a job is never
-looked up twice.
+**Availability check:** this endpoint is gated on some Apollo plans (`API_INACCESSIBLE`).
+If the first call in a run returns this error, stop calling Apollo for the rest of the
+run - do not retry per job. Note the unavailability once and fall back to the LinkedIn
+link (below) for every job in this run.
+
+**Never call `apollo_people_match`, `apollo_organizations_enrich`, or any other
+credit-costing Apollo endpoint** unless the user explicitly asks to enrich a specific
+contact.
+
+**2. LinkedIn manual search link (always included).** No scraping, no automated lookup:
+```
+https://www.linkedin.com/search/results/people/?keywords=<url-encoded "Company Name" + role keyword>&origin=GLOBAL_SEARCH_HEADER
+```
+Include this alongside any Apollo results as a "browse more" option; it's the only
+thing shown for a job when Apollo returns zero results.
+
+Never fabricate contacts - only present what Apollo's search actually returned or a
+valid LinkedIn search URL. If a name is partially masked (e.g. "Jane D***"), note it as
+masked by Apollo rather than guessing the rest.
 
 ### Step 5: Present Results
 
@@ -160,8 +179,7 @@ For each high-match job, add 2-3 bullet points:
 - Any red flags
 
 ### Contacts
-For each high/medium-fit job looked up in Step 4.5, add a short contacts block (format
-and masking/no-match handling per `referral-contacts.md`):
+For each high/medium-fit job looked up in Step 4.5, add a short contacts block:
 - Recruiter/TA contacts found via Apollo, with title and LinkedIn link
 - Role/team-peer contacts found via Apollo, with title and LinkedIn link
 - The LinkedIn manual-search link (always present, primary result when Apollo found nothing)
