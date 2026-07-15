@@ -122,24 +122,33 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
 }
 ```
 
-`/rank` extends this schema additively: ranked entries also carry `rank_score` (0–100 overall score), `rank_verdict` (fit band, e.g. "strong fit"), and `rank_date` (ISO date of ranking). The `status` field is set to `"ranked"`. Step 4.5 (below) also extends this schema additively with a `contacts` object. Do not drop any of these fields when re-writing entries.
+`/rank` extends this schema additively: ranked entries also carry `rank_score` (0–100 overall score), `rank_verdict` (fit band, e.g. "strong fit"), and `rank_date` (ISO date of ranking). The `status` field is set to `"ranked"`. Do not drop any of these fields when re-writing entries.
 
 2. Only present jobs NOT already in the seen list or tracker.
 
 ### Step 4.5: Generate Referral Contact Links (High & Medium Fit Only)
 
-For every job from this run with `fit` of **high** or **medium** (skip low-fit jobs, and
-skip any job whose `seen_jobs.json` entry already has a `contacts` object from a prior
-run), generate LinkedIn people-search links so the user can find a recruiter or team
-member to reach out to for a referral or a warm intro.
+For every job from this run with `fit` of **high** or **medium** (skip low-fit jobs),
+build two LinkedIn people-search URLs so the user can find a recruiter or team member to
+reach out to for a referral or a warm intro. This is deliberately a link-generation step,
+not an automated lookup: no scraping, no third-party API, zero runtime dependencies or
+credentials required.
 
-Read `referral-contacts.md` (this directory) for the full method - it covers the two
-search-link templates (recruiters/TA and role/team peers), the `contacts` storage
-schema, and why this stays a link-generation step rather than an automated lookup (no
-scraping, no third-party API, zero dependencies).
+**A. Recruiters / Talent Acquisition (the referral path)**
+```
+https://www.linkedin.com/search/results/people/?keywords=<url-encoded "<Company Name> recruiter">&origin=GLOBAL_SEARCH_HEADER
+```
 
-Store the result in each job's `seen_jobs.json` entry as it's produced, so a job is never
-looked up twice.
+**B. Role/team peers (informational-outreach / warm-intro path)**
+```
+https://www.linkedin.com/search/results/people/?keywords=<url-encoded "<Company Name> <role keyword>">&origin=GLOBAL_SEARCH_HEADER
+```
+Use a short keyword drawn from the posting's title for `<role keyword>` - e.g. a posting
+titled "AI Program Manager" becomes `"<Company Name> AI Program Manager"`.
+
+Both links are for the user to open and browse themselves - never fetch or scrape the
+LinkedIn people-search result pages programmatically. Never fabricate contacts or claim a
+specific person was found; these are search links, not results.
 
 ### Step 5: Present Results
 
@@ -162,7 +171,7 @@ For each high-match job, add 2-3 bullet points:
 
 ### Contacts
 For each high/medium-fit job from Step 4.5, add a short contacts block with the two
-LinkedIn search links (format per `referral-contacts.md`):
+LinkedIn search links:
 - Recruiters/TA search link, for the referral path
 - Role/team-peer search link, for the warm-intro / informational-outreach path
 ```
